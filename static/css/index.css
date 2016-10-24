@@ -1,0 +1,41 @@
+#posts {
+	line-height: 1.5em;
+	border: solid 5px #000;
+    font-size: 0.85em;
+    text-align: center; 
+    min-height: 800px;
+}
+
+#posts a {
+    text-decoration: none;
+    color: #000000;
+    padding-bottom: 2px;
+
+}
+
+#posts a:hover {
+    color: #FF3366;
+    border-color: #999999;
+    border-width: 0px 0px 1px 0px;
+    border-style: dotted;
+
+}
+
+#posts .post-date {
+    width: 12em;
+    font-size: 0.8em;
+    vertical-align: middle;
+    text-align: right;
+    color: #999999;
+    padding-right: 10px;
+
+}
+ .menu {
+	display: block;
+	vertical-align: center;
+	height: 40px;
+	margin: 0 0 1em 0;
+	overflow: hidden;
+	zoom: 1;
+}
+
