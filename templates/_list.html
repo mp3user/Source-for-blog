@@ -1,0 +1,15 @@
+<ul>
+{% for post in posts %}
+    <li>
+        <a href="{{ url_for("post", post=post.path) }}">{{ post.title }}</a>
+    {% if post.meta.tags|length %}
+        | Tagged:
+        {% for post_tag in post.meta.tags %}
+            <a href="{{ url_for("tag", tag=post_tag) }}">{{ post_tag }}</a>
+        {% endfor %}
+    {% endif %}
+    </li>
+{% else %}
+    <li>No page.</li>
+{% endfor %}
+</ul>

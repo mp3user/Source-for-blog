@@ -149,6 +149,11 @@ def feed():
             published=datetime.combine(post.date, datetime.min.time()))
     return feed.get_response()
 
+@app.route('/tag/<string:tag>/')
+def tag(tag):
+    tagged = [p for p in posts if tag in p.meta.get('tags', [])]
+    return render_template('tag.html', posts=tagged, tag=tag)
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == 'build':
         freezer.freeze()
