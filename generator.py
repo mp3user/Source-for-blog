@@ -134,7 +134,7 @@ def post(path):
  
 @app.route('/feed.atom')
 def feed():
-    feed = AtomFeed('Recent Articles',
+    feed = AtomFeed('KoMo',
                     feed_url=request.url,
                     url=request.url_root)
     posts = blog.posts[:10]
@@ -143,7 +143,7 @@ def feed():
         feed.add(title(post),
             unicode(post.html),
             content_type='html',
-            author='Christopher Roach',
+            author='Konstantin Monakhov',
             url=post.url(_external=True),
             updated=datetime.combine(post.date, datetime.min.time()),
             published=datetime.combine(post.date, datetime.min.time()))
